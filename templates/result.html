@@ -1,0 +1,23 @@
+
+{%block title%} <h1>Shorten URL:</h1>{%endblock%}
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/style.css') }}">
+</head>
+<div class="main">
+    <div class="input-group mb-3">
+{%block content%}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+   {% for message in messages %}
+  <p class='message'>  {{ message }} </p> 
+   {% endfor %}
+{% endif %}
+{% endwith %}
+
+<h1><a href="http://127.0.0.1:5000/{{short_present}}">http://127.0.0.1:5000/{{short_present}}</a></h1>
+<p>
+<a  href="http://127.0.0.1:5000/">Try again</a></p>
+</form>   
+</div>
+</div>
+{%endblock%}
