@@ -18,3 +18,4 @@ sqlparse==0.4.2
 toml==0.10.2
 virtualenv==20.15.1
 Werkzeug==2.2.2
+psycopg2==2.8.4
