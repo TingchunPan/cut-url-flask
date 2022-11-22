@@ -6,7 +6,9 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.secret_key = "hello"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://hfydajtbvcryyg:9e33fd759f9e45a913cfd30bb32914149a8712b8fdea7ec82f1578869c745842@ec2-52-23-131-232.compute-1.amazonaws.com:5432/db4pcdi31alrhs'
+# sqlite:///urls.sqlite3
+# postgres://hfydajtbvcryyg:9e33fd759f9e45a913cfd30bb32914149a8712b8fdea7ec82f1578869c745842@ec2-52-23-131-232.compute-1.amazonaws.com:5432/db4pcdi31alrhs
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///urls.sqlite3'
 db = SQLAlchemy(app)
 pwd_hash = db.Column(db.String(100),  nullable=False)
 
